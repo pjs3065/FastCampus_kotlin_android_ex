@@ -2,7 +2,7 @@ package com.example.parkjs.myapplication
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.parkjs.myapplication.step2.*
+import com.example.parkjs.myapplication.step3.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +25,12 @@ class MainActivity : AppCompatActivity() {
         //doTest(PolymorphTest(::WriteLn))
         //doTest(InterfaceAbstractTest(::WriteLn))
         //doTest(DataClassTest(::WriteLn))
-        doTest(ObjectTest(::WriteLn))
+        //doTest(ObjectTest(::WriteLn))
+        //doTest(LambdaTest(::WriteLn))
+        //doTest(ExFunctionTest(::WriteLn))
+        //doTest(ClosureTest(::WriteLn))
+        //doTest(ExFunctionTest2(::WriteLn))
+        doTest(DSLTest(::WriteLn))
     }
 
     private fun doTest(o: TestClass) {
