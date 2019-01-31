@@ -3,6 +3,10 @@ package com.example.parkjs.myapplication
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.parkjs.myapplication.step3.*
+import com.example.parkjs.myapplication.step4.InfixTest
+import com.example.parkjs.myapplication.step4.LateTest
+import com.example.parkjs.myapplication.step4.MultiRetunTest
+import com.example.parkjs.myapplication.step4.PropertiesTest
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +34,12 @@ class MainActivity : AppCompatActivity() {
         //doTest(ExFunctionTest(::WriteLn))
         //doTest(ClosureTest(::WriteLn))
         //doTest(ExFunctionTest2(::WriteLn))
-        doTest(DSLTest(::WriteLn))
+        //doTest(DSLTest(::WriteLn))
+        //doTest(CurringTest(::WriteLn))
+        //doTest(InfixTest(::WriteLn))
+        //doTest(MultiRetunTest(::WriteLn))
+        //doTest(LateTest(::WriteLn))
+        doTest(PropertiesTest(::WriteLn))
     }
 
     private fun doTest(o: TestClass) {
