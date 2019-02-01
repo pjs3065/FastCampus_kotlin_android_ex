@@ -1,7 +1,9 @@
 package com.example.parkjs.myapplication
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.parkjs.myapplication.javainterlop.javaActivity
 import com.example.parkjs.myapplication.step3.*
 import com.example.parkjs.myapplication.step4.InfixTest
 import com.example.parkjs.myapplication.step4.LateTest
@@ -39,7 +41,18 @@ class MainActivity : AppCompatActivity() {
         //doTest(InfixTest(::WriteLn))
         //doTest(MultiRetunTest(::WriteLn))
         //doTest(LateTest(::WriteLn))
-        doTest(PropertiesTest(::WriteLn))
+        //doTest(PropertiesTest(::WriteLn))
+
+        setClickHandler()
+
+    }
+
+    fun MainActivity.setClickHandler()
+    {
+        btnTest.setOnClickListener {
+            var I = Intent(this, javaActivity::class.java)
+            startActivity(I)
+        }
     }
 
     private fun doTest(o: TestClass) {
